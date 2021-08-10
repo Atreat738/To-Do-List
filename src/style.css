@@ -1,6 +1,9 @@
-body {
+html, body {
     margin: 0;
     padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
     background-color: #1974d2
 }
 
@@ -10,7 +13,7 @@ header {
     top: 0;
     height: 15vh;
     width: 100%;
-    border-bottom: 2px solid black;
+    border-bottom: 3px solid black;
     background-color: navy;
 }
 
@@ -18,4 +21,44 @@ header h1 {
     margin-left: 25px;
     font-size: 3rem;
     color: #e6e200; 
+}
+
+#SideBar {
+    background-color: #400080;
+    left: 0;
+    width: 40vh;
+    border-right: 2px solid black;
+    height: 80vh;
+    font-size: 1.5rem;
+    color: #e6e200;
+}
+
+#SideBar p {
+    margin-top: 0;
+    padding-top: 2.5vh;
+}
+
+#SideBar ul {
+    list-style: none;
+}
+
+#SideBar ul li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    height: 5vh;
+    width: 100%;
+    border-top: 2px solid black;
+    background-color: navy;
+}
+
+footer p {
+    color: #e6e200;
 }
