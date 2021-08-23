@@ -4,7 +4,7 @@ html, body {
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-    background-color: #1974d2
+    background-color: #1974d2;
 }
 
 header {
@@ -23,10 +23,44 @@ header h1 {
     color: #e6e200; 
 }
 
+#RightContainer {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    left: 40.1vh;
+    width: 90%;
+    height: 82%;
+}
+
+.CardContainer {
+    border: 3px solid black;
+    border-radius: 10px;
+    width: 12.5vw;
+    height: 32vh;
+    margin: 10px;
+    padding: 15px;
+    font-family: 'Vidaloka', serif;
+    background-color: #800080;
+    color: #e6e200;
+
+}
+
+.CardHeader {
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 1.15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: navy;
+}
+
 #SideBar {
     background-color: #400080;
     left: 0;
-    width: 40vh;
+    width: 40vw;
     border-right: 2px solid black;
     height: 80vh;
     font-size: 1.5rem;
@@ -34,12 +68,17 @@ header h1 {
 }
 
 #SideBar p {
+    margin-left: 5px;
     margin-top: 0;
     padding-top: 2.5vh;
 }
 
 #SideBar ul {
     list-style: none;
+}
+
+#SideBar ul li {
+    margin-top: 7.5px;
 }
 
 #SideBar ul li:hover {
