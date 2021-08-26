@@ -29,7 +29,7 @@ header h1 {
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-around;
-    left: 40.1vh;
+    left: 16vw;
     width: 90%;
     height: 82%;
 }
@@ -60,7 +60,7 @@ header h1 {
 #SideBar {
     background-color: #400080;
     left: 0;
-    width: 40vw;
+    width: 15vw;
     border-right: 2px solid black;
     height: 80vh;
     font-size: 1.5rem;
