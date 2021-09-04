@@ -1,8 +1,16 @@
-export default function addProject() {
-    const addProjectBtn = document.querySelector('#AddProject');
-    const titleInput = document.querySelectoy('#TitleInput');
+export default (function addProject() {
+    const addProjectBtn = document.querySelector('#AddProjectBtn');
+    const formModal = document.querySelector('#FormContainer');
+    const closeFormBtn = document.querySelector('#CloseForm')
+    const titleInput = document.querySelector('#TitleInput');
 
-    addProjectBtn.addEventListener('click', () => {
-        
+    addProjectBtn.addEventListener('click', () => {        
+        formModal.style.display = "flex";
     })
-}
+
+    closeFormBtn.addEventListener('click', () => {
+        formModal.style.display = "none";
+    })
+
+
+})();

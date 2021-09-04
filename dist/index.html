@@ -24,8 +24,9 @@
             <input type="checkbox" name="CompleteStatus"> Completed
         </div>
 
-        
+
             <form id="FormContainer">
+                <div id="CloseForm">X</div>
                 <h3 class="Center">Create New Project</h3>
                 <label for="TitleInput" id="TitleInputLabel">
                 <input type="text" id="TitleInput" name="TitleInput" value="" placeholder="Project Title">
@@ -46,14 +47,14 @@
                 Medium: <input type="radio" id="MediumPriority" class="PriorityInputs" name="PriorityInput">
                 High: <input type="radio" id="HighPriority" class="PriorityInputs" name="PriorityInput">
                 </label>
-                
+                    
                 <label for="CompleteStatus" class="Center">Completed?
                 <input type="checkbox" id="CompleteStatus" name="CompleteStatus">
                 </label>
 
                 <button type="submit" id="FormSubmitBtn">Submit</button>
             </form> 
-        
+            
 
         
     </div>
@@ -62,8 +63,8 @@
     <div id="SideBar">
         <p>Projects</p>
         <ul>
-            <li>Default Project</li>
-            <li id="AddProject">+ Project</li>
+            <li class="Projectli">Default Project</li>
+            <li id="AddProjectBtn" class="Projectli">+ Project</li>
         </ul>
     </div>
        
