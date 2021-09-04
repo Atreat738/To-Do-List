@@ -26,28 +26,32 @@
 
         
             <form id="FormContainer">
-                <h3>Create New Project</h3>
-                <label for="TitleInput">
-                <input type="text" id="TitleInput" name="TitleInput" placeholder="Project Title">
+                <h3 class="Center">Create New Project</h3>
+                <label for="TitleInput" id="TitleInputLabel">
+                <input type="text" id="TitleInput" name="TitleInput" value="" placeholder="Project Title">
                 </label>
 
-                <label for="DescriptionInput">Description:
-                <input type="text" id="DescriptionInput" name="DescriptionInput">
+                <label for="DescriptionInput" class="Center">
+                <input type="textarea" id="DescriptionInput" name="DescriptionInput" placeholder="Description:">
                 </label>
 
-                <label for="DateInput">Due Date:
-                <input type="datetime" id="DateInput" name="DateInput">
+                <label for="DateInput" class="Center">Due Date:
+                <input type="date" id="DateInput" class="Center" name="DateInput">
                 </label>
 
-                <label for="PriorityInput" id="RadioContainer">Priority:
-                Low: <input type="radio" id="LowPriority" name="PriorityInput">
-                Medium: <input type="radio" id="MediumPriority" name="PriorityInput">
-                High: <input type="radio" id="HighPriority" name="PriorityInput">
+
+                <p class="Center">Priority:</p> 
+                <label for="PriorityInput" id="RadioContainer">
+                Low: <input type="radio" id="LowPriority" class="PriorityInputs" name="PriorityInput">
+                Medium: <input type="radio" id="MediumPriority" class="PriorityInputs" name="PriorityInput">
+                High: <input type="radio" id="HighPriority" class="PriorityInputs" name="PriorityInput">
                 </label>
                 
-                <label for="CompleteStatus">Complete:
+                <label for="CompleteStatus" class="Center">Completed?
                 <input type="checkbox" id="CompleteStatus" name="CompleteStatus">
                 </label>
+
+                <button type="submit" id="FormSubmitBtn">Submit</button>
             </form> 
         
 
