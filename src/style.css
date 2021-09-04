@@ -44,6 +44,7 @@ header h1 {
     font-family: 'Vidaloka', serif;
     background-color: #800080;
     color: #e6e200;
+    z-index: 1;
 
 }
 
@@ -101,3 +102,24 @@ footer {
 footer p {
     color: #e6e200;
 }
+
+#FormContainer {
+    font-family: 'Vidaloka', serif;
+    font-size: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    padding:10px;
+    z-index: 2;
+    margin: auto 30% auto 30%;
+    border: 2px solid black;
+    width: 20%;
+    height: 50%;
+    background-color: greenyellow;
+}
+
+#FormContainer h3 {
+    margin-top: 0;
+}
+

@@ -23,43 +23,37 @@
             <p>Priority Level: Medium</p>
             <input type="checkbox" name="CompleteStatus"> Completed
         </div>
+
         
-        <div class="CardContainer">
-            <div class="CardHeader">
-                <h3>Default Project</h3>
-            </div>
-        </div>
-        <div class="CardContainer">
-            <div class="CardHeader">
-                <h3>Default Project</h3>
-            </div>
-        </div>
-        <div class="CardContainer">
-            <div class="CardHeader">
-                <h3>Default Project</h3>
-            </div>
-        </div>
-        <div class="CardContainer">
-            <div class="CardHeader">
-                <h3>Default Project</h3>
-            </div>
-        </div>
-        <div class="CardContainer">
-            <div class="CardHeader">
-                <h3>Default Project</h3>
-            </div>
-        </div>
-        <div class="CardContainer">
-            <div class="CardHeader">
-                <h3>Default Project</h3>
-            </div>
-        </div>
-        <div class="CardContainer">
-            <div class="CardHeader">
-                <h3>Default Project</h3>
-            </div>
-        </div>
+            <form id="FormContainer">
+                <h3>Create New Project</h3>
+                <label for="TitleInput">
+                <input type="text" id="TitleInput" name="TitleInput" placeholder="Project Title">
+                </label>
+
+                <label for="DescriptionInput">Description:
+                <input type="text" id="DescriptionInput" name="DescriptionInput">
+                </label>
+
+                <label for="DateInput">Due Date:
+                <input type="datetime" id="DateInput" name="DateInput">
+                </label>
+
+                <label for="PriorityInput" id="RadioContainer">Priority:
+                Low: <input type="radio" id="LowPriority" name="PriorityInput">
+                Medium: <input type="radio" id="MediumPriority" name="PriorityInput">
+                High: <input type="radio" id="HighPriority" name="PriorityInput">
+                </label>
+                
+                <label for="CompleteStatus">Complete:
+                <input type="checkbox" id="CompleteStatus" name="CompleteStatus">
+                </label>
+            </form> 
+        
+
+        
     </div>
+
 
     <div id="SideBar">
         <p>Projects</p>
