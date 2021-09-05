@@ -58,11 +58,11 @@ export default (function addProject() {
         let dateP = document.createElement('p');
         dateP.textContent = 'Due Date: ';
         newCard.appendChild(dateP);
-        let newDate = document.createElement('input[type="date"]');
+        let newDate = document.createElement('input');
+        newDate.setAttribute('type', 'date');
         newDate.defaultValue = dateInput.value;
         dateP.appendChild(newDate);
 
-        
         //Place new form card onto DOM
     })
 
