@@ -35,6 +35,7 @@ header h1 {
 }
 
 .CardContainer {
+    position: relative;
     border: 3px solid black;
     border-radius: 10px;
     width: 12.5vw;
@@ -56,6 +57,18 @@ header h1 {
     justify-content: center;
     align-items: center;
     background-color: navy;
+}
+
+#ProjectDelete {
+    background-color: #800000;
+    color: #e6e200;
+    font-size: 1.025rem;
+    border: 2px solid black;
+    border-radius: 2.5px;
+    position: absolute;
+    bottom: 7.5px;
+    right: 15px;
+    padding: 2px 3px; 
 }
 
 #SideBar {
@@ -157,7 +170,7 @@ footer p {
     text-align: center;
     border: 1.5px solid black;
     font-size: 1.05rem;
-    background-color: #d21944;
+    background-color: #800000;
     color: #d2bc19;
     padding: 2px 4px;
     position: absolute;
@@ -166,7 +179,7 @@ footer p {
     box-shadow: 10px 10px 30px -5px rgba(0,0,0,0.67);
 }
 
-#CloseForm:hover {
+#CloseForm:hover, #ProjectDelete:hover {
     cursor: pointer;
 }
 
@@ -190,6 +203,7 @@ footer p {
 #FormSubmitBtn {
     background-color: #d26019;
     border: 2px solid black;
+    border-radius: 2.5px;
     color: white;
     font-size: 1.15rem;
     padding: 3px;
