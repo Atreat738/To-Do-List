@@ -17,12 +17,12 @@
 
 
         <div class="CardContainer">
-            <button id="ProjectDelete">Delete</button>
+            <button class="ProjectDelete">Delete</button>
             <div class="CardHeader">
                 <h3>Default Project</h3>
             </div>
             <p>Default project description. It's gonna be something nifty! lorem ipsum something or other</p>
-            <p>Due Date: 01/01/2022</p>
+            <p>Due Date: <input type="date"></p>
             <p>Priority Level: Medium</p>
             <input type="checkbox" name="CompleteStatus"> Completed
         </div>
@@ -36,7 +36,7 @@
                 </label>
 
                 <label for="DescriptionInput" class="Center">
-                <input type="textarea" id="DescriptionInput" name="DescriptionInput" placeholder="Description:">
+                <input type="textarea" id="DescriptionInput" name="DescriptionInput" value="" placeholder="Description:">
                 </label>
 
                 <label for="DateInput" class="Center">Due Date:
@@ -55,7 +55,7 @@
                 <input type="checkbox" id="CompleteStatus" name="CompleteStatus">
                 </label>
 
-                <button type="submit" id="FormSubmitBtn">Submit</button>
+                <button id="FormSubmitBtn">Submit</button>
             </form> 
             
 

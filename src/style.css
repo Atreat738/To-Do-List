@@ -49,6 +49,16 @@ header h1 {
 
 }
 
+.CardContainer input[type="date"] {
+    font-family: 'Vidaloka', serif;
+    color: #e6e200;
+    background: transparent;
+    border: 2.5px dotted #e6e200;
+    border-radius: 2.5px;
+    padding: 4px;
+    margin-left: 5px;
+}
+
 .CardHeader {
     border: 1px solid black;
     border-radius: 5px;
@@ -59,7 +69,7 @@ header h1 {
     background-color: navy;
 }
 
-#ProjectDelete {
+.ProjectDelete {
     background-color: #800000;
     color: #e6e200;
     font-size: 1.025rem;
@@ -179,7 +189,7 @@ footer p {
     box-shadow: 10px 10px 30px -5px rgba(0,0,0,0.67);
 }
 
-#CloseForm:hover, #ProjectDelete:hover {
+#CloseForm:hover, .ProjectDelete:hover {
     cursor: pointer;
 }
 
