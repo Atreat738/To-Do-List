@@ -23,7 +23,14 @@
             </div>
             <p>Default project description. It's gonna be something nifty! lorem ipsum something or other</p>
             <p>Due Date: <input type="date"></p>
-            <p>Priority Level: Medium</p>
+            <p>Priority Level: 
+                <select class="SelectBox">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>                    
+                </select>
+            </p>
+
             <input type="checkbox" name="CompleteStatus"> Completed
         </div>
 
@@ -43,13 +50,14 @@
                 <input type="date" id="DateInput" class="Center" name="DateInput">
                 </label>
 
-
-                <h4>Priority:</h4> 
-                <label for="PriorityInput" id="RadioContainer">
-                Low: <input type="radio" id="LowPriority" class="PriorityInputs" name="PriorityInput">
-                Medium: <input type="radio" id="MediumPriority" class="PriorityInputs" name="PriorityInput">
-                High: <input type="radio" id="HighPriority" class="PriorityInputs" name="PriorityInput">
-                </label>
+                <p class="Center">Priority Level:
+                    <select class="SelectBox">
+                        <option value="low" class="SelectLow">Low</option>
+                        <option value="medium" class="SelectMedium">Medium</option>
+                        <option value="high" class="SelectHigh">High</option>
+                    </select>
+                </p>
+                
                     
                 <label for="CompleteStatus" class="Center">Completed?
                 <input type="checkbox" id="CompleteStatus" name="CompleteStatus">

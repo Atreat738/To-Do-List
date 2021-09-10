@@ -63,7 +63,48 @@ export default (function addProject() {
         newDate.defaultValue = dateInput.value;
         dateP.appendChild(newDate);
 
-        //Place new form card onto DOM
+        //Begin Adding Select Box and options
+        let priorityP = document.createElement('p');
+        priorityP.textContent = 'Priority Level: ';
+        newCard.appendChild(priorityP);
+
+        let newSelect = document.createElement('select');
+        newSelect.classList.add('SelectBox');
+        priorityP.appendChild(newSelect);
+
+        let lowSelect = document.createElement('option');
+        lowSelect.setAttribute('value', 'low');
+        lowSelect.classList.add('SelectLow');
+        lowSelect.textContent = 'Low';
+        newSelect.appendChild(lowSelect);
+
+        let mediumSelect = document.createElement('option');
+        mediumSelect.setAttribute('value', 'medium');
+        mediumSelect.classList.add('SelectMedium');
+        mediumSelect.textContent = 'Medium';
+        newSelect.appendChild(mediumSelect);
+
+        let highSelect = document.createElement('option');
+        highSelect.setAttribute('value', 'high');
+        highSelect.classList.add('SelectHigh');
+        highSelect.textContent = 'High';
+        newSelect.appendChild(highSelect);
+
+        // setSelectValue(newSelect.option);
+
+        // function setSelectValue() {
+        //     if(newSelect.option === lowSelect && newSelect.option !== mediumSelect && newSelect.option !== highSelect) {
+        //         return newSelect.option = lowSelect;
+        //     } else if(newSelect.option === mediumSelect && newSelect.option !== lowSelect && newSelect.option !== highSelect) {
+        //         return newSelect.option = mediumSelect;
+        //     } else if(newSelect.option === highSelect && newSelect.option !== lowSelect && newSelect.option!== mediumSelect) {
+        //         return newSelect.option = highSelect;
+        //     }
+        //     console.log(newSelect.option);
+        // } 
+
+        
+      
     })
 
 })();

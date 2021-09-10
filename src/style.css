@@ -69,6 +69,21 @@ header h1 {
     background-color: navy;
 }
 
+.SelectBox {
+    border: 2px solid black;
+    /* background: transparent; */
+}
+
+select option[value="low"] {
+    background-color: green;
+}
+.SelectMedium:hover {
+    background: yellow;
+}
+.SelectLow:hover {
+    background: rgba(255, 0, 0);
+}
+
 .ProjectDelete {
     background-color: #800000;
     color: #e6e200;
@@ -167,10 +182,6 @@ footer p {
     border: none;
 }
 
-#FormContainer h4 {
-    margin: 5px auto;
-}
-
 ::placeholder {
     color: black;
     opacity: 1; 
@@ -197,12 +208,6 @@ footer p {
     display: flex;
     justify-content: center;
     text-align: center;
-}
-
-#RadioContainer {
-    display: flex;
-    justify-content: space-around;
-    margin: 5px 0;
 }
 
 #FormContainer input[type="radio"] {
