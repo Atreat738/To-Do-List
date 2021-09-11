@@ -1,6 +1,5 @@
 export default (function addProject() {
     const addProjectBtn = document.querySelector('#AddProjectBtn');
-    const deleteProjectBtn = document.querySelectorAll('.ProjectDelete');
     const formModal = document.querySelector('#FormContainer');
     const closeFormBtn = document.querySelector('#CloseForm');
     const formSubmitBtn = document.querySelector('#FormSubmitBtn');
@@ -44,6 +43,12 @@ export default (function addProject() {
         deleteBtn.classList.add('ProjectDelete');
         deleteBtn.textContent = 'Delete';
         newCard.appendChild(deleteBtn);
+
+        deleteBtn.addEventListener('click', (e) => {
+            //if newProjectli = parentnode > div(header) > h3
+            //delete newProjectli
+            newCard.parentNode.removeChild(newCard);
+        })
 
         let cardHeader = document.createElement('div');
         cardHeader.classList.add('CardHeader');
