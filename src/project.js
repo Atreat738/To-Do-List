@@ -45,8 +45,10 @@ export default (function addProject() {
         newCard.appendChild(deleteBtn);
 
         deleteBtn.addEventListener('click', (e) => {
-            //if newProjectli = parentnode > div(header) > h3
-            //delete newProjectli
+            //If the delete button's h3 = the sidebar title: Delete 
+            if(deleteBtn.nextSibling.firstChild.textContent == newProjectli.textContent) {
+                sideBarul.removeChild(newProjectli);
+            }
             newCard.parentNode.removeChild(newCard);
         })
 
