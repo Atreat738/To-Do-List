@@ -11,6 +11,7 @@ export default (function addProject() {
     const descriptionInput = document.querySelector('#DescriptionInput');
     const dateInput = document.querySelector('#DateInput');
     const selectInput = document.querySelector('#FormSelectBox');
+    const completeStatusInput = document.querySelector('#CompleteStatus');
     
 
     addProjectBtn.addEventListener('click', (e) => {
@@ -103,8 +104,25 @@ export default (function addProject() {
                 newSelect.selectedIndex = 2;
             }
         } 
+        //END Adding select box and options
 
+        let checkBoxInput = document.createElement('input');
+        checkBoxInput.setAttribute('type', 'checkbox');
+        checkBoxInput.setAttribute('name', 'CompleteStatus');
+        newCard.appendChild(checkBoxInput);
+        let checkText = document.createElement('span');
+        checkText.textContent = ' Completed';
+        newCard.appendChild(checkText);
         
+        setCheckStatus();
+
+        function setCheckStatus() {
+            if(completeStatusInput.checked == true) {
+                checkBoxInput.checked = true;
+            } else if (completeStatusInput.checked == false) {
+                checkBoxInput.checked = false;
+            }
+        }
       
     })
 
