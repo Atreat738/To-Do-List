@@ -10,6 +10,7 @@ export default (function addProject() {
     const titleInput = document.querySelector('#TitleInput');
     const descriptionInput = document.querySelector('#DescriptionInput');
     const dateInput = document.querySelector('#DateInput');
+    const selectInput = document.querySelector('#FormSelectBox');
     
 
     addProjectBtn.addEventListener('click', (e) => {
@@ -73,35 +74,35 @@ export default (function addProject() {
         priorityP.appendChild(newSelect);
 
         let lowSelect = document.createElement('option');
-        lowSelect.setAttribute('value', 'low');
+        lowSelect.setAttribute('value', 'Low');
         lowSelect.classList.add('SelectLow');
         lowSelect.textContent = 'Low';
         newSelect.appendChild(lowSelect);
 
         let mediumSelect = document.createElement('option');
-        mediumSelect.setAttribute('value', 'medium');
+        mediumSelect.setAttribute('value', 'Medium');
         mediumSelect.classList.add('SelectMedium');
         mediumSelect.textContent = 'Medium';
         newSelect.appendChild(mediumSelect);
 
         let highSelect = document.createElement('option');
-        highSelect.setAttribute('value', 'high');
+        highSelect.setAttribute('value', 'High');
         highSelect.classList.add('SelectHigh');
         highSelect.textContent = 'High';
         newSelect.appendChild(highSelect);
 
-        // setSelectValue(newSelect.option);
+        setSelectValue();
 
-        // function setSelectValue() {
-        //     if(newSelect.option === lowSelect && newSelect.option !== mediumSelect && newSelect.option !== highSelect) {
-        //         return newSelect.option = lowSelect;
-        //     } else if(newSelect.option === mediumSelect && newSelect.option !== lowSelect && newSelect.option !== highSelect) {
-        //         return newSelect.option = mediumSelect;
-        //     } else if(newSelect.option === highSelect && newSelect.option !== lowSelect && newSelect.option!== mediumSelect) {
-        //         return newSelect.option = highSelect;
-        //     }
-        //     console.log(newSelect.option);
-        // } 
+        function setSelectValue() {
+            let selectedValue = selectInput.options[selectInput.selectedIndex].text; 
+            if(selectedValue == 'Low' && selectedValue != 'Medium' && selectedValue != 'High') {
+                newSelect.selectedIndex = 0;
+            } else if(selectedValue == 'Medium' && selectedValue != 'Low' && selectedValue != 'High') {
+                newSelect.selectedIndex = 1;
+            } else if(selectedValue == 'High' && selectedValue != 'Low' && selectedValue != 'Medium') {
+                newSelect.selectedIndex = 2;
+            }
+        } 
 
         
       
