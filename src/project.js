@@ -3,6 +3,7 @@ export default (function addProject() {
     const formModal = document.querySelector('#FormContainer');
     const closeFormBtn = document.querySelector('#CloseForm');
     const formSubmitBtn = document.querySelector('#FormSubmitBtn');
+    const defaultDeleteBtn = document.querySelector('#DefaultDeleteBtn');
 
     const rightContainer = document.querySelector('#RightContainer')
     const sideBarul = document.querySelector('#SideBarul');
@@ -22,6 +23,15 @@ export default (function addProject() {
         e.preventDefault();    //prevents page refresh. Fix once localstorage is implemented  
         formModal.style.display = "none";
     })
+
+    // class ToDo {
+    //     constructor(title, descriptionm) {
+    //         this.title = title;
+    //         this.description = description;
+    //     }
+
+
+    // }
 
     formSubmitBtn.addEventListener('click', (e) => {
         e.preventDefault();   //prevents page refresh. Fix once localstorage is implemented  
@@ -52,6 +62,7 @@ export default (function addProject() {
             newCard.parentNode.removeChild(newCard);
         })
 
+
         let cardHeader = document.createElement('div');
         cardHeader.classList.add('CardHeader');
         newCard.appendChild(cardHeader);
@@ -62,6 +73,7 @@ export default (function addProject() {
 
         let projectDescription = document.createElement('p');
         projectDescription.textContent = descriptionInput.value;
+        projectDescription.setAttribute('contenteditable', 'true');
         newCard.appendChild(projectDescription);
 
         let dateP = document.createElement('p');
@@ -130,7 +142,6 @@ export default (function addProject() {
                 checkBoxInput.checked = false;
             }
         }
-      
     })
 
 })();

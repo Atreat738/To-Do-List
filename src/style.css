@@ -1,72 +1,82 @@
 html, body {
+    background-color: #1974d2;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
     margin: 0;
     padding: 0;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    background-color: #1974d2;
 }
 
 header {
     display: flex;
     align-items: center;
     top: 0;
-    height: 15vh;
+    height: 15%;
     width: 100%;
     border-bottom: 3px solid black;
     background-color: navy;
 }
 
 header h1 {
-    margin-left: 25px;
+    margin-left: 0.75em;
     font-size: 3rem;
     color: #e6e200; 
 }
 
 #RightContainer {
-    position: absolute;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: space-around;
-    left: 16vw;
-    width: 90%;
     height: 82%;
+    width: 90%;
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5em;
+    left: 16vw;
+    overflow-y: scroll;
 }
 
 .CardContainer {
-    position: relative;
+    background-color: #800080;
     border: 3px solid black;
     border-radius: 10px;
-    width: 12.5vw;
-    height: 32vh;
-    margin: 10px;
-    padding: 15px;
-    font-family: 'Vidaloka', serif;
-    background-color: #800080;
     color: #e6e200;
+    font-family: 'Vidaloka', serif;
+    position: relative;
+    width: 15em;
+    height: 17.5em;
+    padding: 0.9em;
     z-index: 1;
+}
 
+@media (max-width: 1200px) {
+    #RightContainer {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 800px) {
+    #RightContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .CardContainer input[type="date"] {
-    font-family: 'Vidaloka', serif;
-    color: #e6e200;
     background: transparent;
     border: 2.5px dotted #e6e200;
     border-radius: 2.5px;
-    padding: 4px;
+    color: #e6e200;
+    font-family: 'Vidaloka', serif;
     margin-left: 5px;
+    padding: 4px;
 }
 
 .CardHeader {
+    background-color: navy;
     border: 1px solid black;
     border-radius: 5px;
     font-size: 1.15rem;
     display: flex;
-    justify-content: center;
     align-items: center;
-    background-color: navy;
+    justify-content: center;
 }
 
 .SelectBox {
@@ -86,30 +96,30 @@ select option[value="low"] {
 
 .ProjectDelete {
     background-color: #800000;
-    color: #e6e200;
-    font-size: 1.025rem;
     border: 2px solid black;
     border-radius: 2.5px;
+    color: #e6e200;
+    font-size: 1.025rem;
+    padding: 2px 3px; 
     position: absolute;
     bottom: 7.5px;
     right: 15px;
-    padding: 2px 3px; 
 }
 
 #SideBar {
     background-color: #400080;
-    left: 0;
-    width: 15vw;
     border-right: 2px solid black;
-    height: 80vh;
-    font-size: 1.5rem;
     color: #e6e200;
+    font-size: 1.5rem;
+    height: 80%;
+    width: 15%;
+    left: 0;
 }
 
 #SideBar p {
-    margin-left: 5px;
+    margin-left: 0.25em;
     margin-top: 0;
-    padding-top: 2.5vh;
+    padding-top: 5%;
 }
 
 #SideBar ul {
@@ -117,7 +127,7 @@ select option[value="low"] {
 }
 
 #SideBar ul li {
-    margin-top: 7.5px;
+    margin-top: 0.3em;
 }
 
 #SideBar ul li:hover, #FormSubmitBtn:hover {
@@ -127,14 +137,14 @@ select option[value="low"] {
 
 
 footer {
+    background-color: navy;
+    border-top: 2px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
     bottom: 0;
-    height: 5vh;
+    height: 5%;
     width: 100%;
-    border-top: 2px solid black;
-    background-color: navy;
 }
 
 footer p {
@@ -147,26 +157,22 @@ footer p {
 
 /* Begin Create Project Form CSS*/
 
-#FormModal {
-    display: none;
-}
-
 #FormContainer {
+    background-color: #d2bc19;
+    border: 3px solid black;
+    border-radius: 5px;
     font-family: 'Vidaloka', serif;
     font-size: 1.25rem;
+    height: 52.5%;
+    width: 20%;
+    box-shadow: 19px 16px 12px -2px rgba(0,0,0,0.60);
+    margin: auto 30% auto 30%;
+    padding: 10px;
     display: none;
     flex-direction: column;
     justify-content: center;
     position: absolute;
     z-index: 2;
-    padding: 10px;
-    margin: auto 30% auto 30%;
-    border: 3px solid black;
-    border-radius: 5px;
-    box-shadow: 19px 16px 12px -2px rgba(0,0,0,0.60);
-    width: 20%;
-    height: 52.5%;
-    background-color: #d2bc19;
 }
 
 #FormContainer h3 {
@@ -176,10 +182,10 @@ footer p {
 }
 
 #FormContainer input {
-    margin: 10px 2.5px;
-    box-shadow: 10px 10px 30px -5px rgba(0,0,0,0.67);
     background: transparent;
     border: none;
+    box-shadow: 10px 10px 30px -5px rgba(0,0,0,0.67);
+    margin: 10px 2.5px;
 }
 
 ::placeholder {
@@ -188,16 +194,16 @@ footer p {
 }
 
 #CloseForm {
-    text-align: center;
-    border: 1.5px solid black;
-    font-size: 1.05rem;
     background-color: #800000;
+    border: 1.5px solid black;
     color: #d2bc19;
+    font-size: 1.05rem;
+    text-align: center;
     padding: 2px 4px;
-    position: absolute;
-    top: 10px;
-    right: 10px;
     box-shadow: 10px 10px 30px -5px rgba(0,0,0,0.67);
+    position: absolute;
+    right: 10px;
+    top: 10px;
 }
 
 #CloseForm:hover, .ProjectDelete:hover {
@@ -221,7 +227,7 @@ footer p {
     border-radius: 2.5px;
     color: white;
     font-size: 1.15rem;
+    margin: 0.5em auto 0 auto;
     padding: 3px;
-    margin: 10px auto 0 auto;
 }
 /*End Create Project Form CSS*/
