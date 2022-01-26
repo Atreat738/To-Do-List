@@ -30,7 +30,7 @@ header h1 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 0.5em;
-    left: 16vw;
+    left: 16%;
     overflow-y: scroll;
 }
 
@@ -45,18 +45,6 @@ header h1 {
     height: 17.5em;
     padding: 0.9em;
     z-index: 1;
-}
-
-@media (max-width: 1200px) {
-    #RightContainer {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (max-width: 800px) {
-    #RightContainer {
-        grid-template-columns: repeat(2, 1fr);
-    }
 }
 
 .CardContainer input[type="date"] {
@@ -82,16 +70,6 @@ header h1 {
 .SelectBox {
     border: 2px solid black;
     /* background: transparent; */
-}
-
-select option[value="low"] {
-    background-color: green;
-}
-.SelectMedium:hover {
-    background: yellow;
-}
-.SelectLow:hover {
-    background: rgba(255, 0, 0);
 }
 
 .ProjectDelete {
@@ -163,8 +141,8 @@ footer p {
     border-radius: 5px;
     font-family: 'Vidaloka', serif;
     font-size: 1.25rem;
-    height: 52.5%;
-    width: 20%;
+    height: 20em;
+    width: 15em;
     box-shadow: 19px 16px 12px -2px rgba(0,0,0,0.60);
     margin: auto 30% auto 30%;
     padding: 10px;
@@ -231,3 +209,33 @@ footer p {
     padding: 3px;
 }
 /*End Create Project Form CSS*/
+/*Begin Media queries */
+
+@media (max-width: 1200px) {
+    #RightContainer {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    #RightContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #SideBar ul {
+        padding-left: 5px;
+    }
+}
+
+@media (max-width: 720px) {
+    #RightContainer {
+        grid-template-columns: repeat(1, 1fr);
+        left: 35%;
+    }
+    #SideBar {
+        width: 110px;
+    }
+    #FormContainer {
+        margin: auto auto auto 0;
+    }
+}
